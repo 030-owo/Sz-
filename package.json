@@ -1,0 +1,23 @@
+{
+  "name": "sz-fleet",
+  "version": "0.1.0",
+  "private": true,
+  "description": "設備監看儀表板 — fleet telemetry for shipped Windows machines",
+  "workspaces": [
+    "packages/shared",
+    "packages/server",
+    "packages/agent",
+    "packages/web"
+  ],
+  "scripts": {
+    "build": "npm run build -w packages/shared && npm run build -w packages/server && npm run build -w packages/web && npm run build -w packages/agent",
+    "build:shared": "npm run build -w packages/shared",
+    "dev:server": "npm run dev -w packages/server",
+    "dev:web": "npm run dev -w packages/web",
+    "dev:agent": "npm run dev -w packages/agent",
+    "typecheck": "tsc -b packages/shared packages/server packages/agent"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

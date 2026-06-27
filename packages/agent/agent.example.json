@@ -1,0 +1,10 @@
+{
+  "serverUrl": "http://localhost:8080",
+  "token": "貼上 seed-token 產生的 TOKEN",
+  "name": "客戶A-產線1號機",
+  "vendor": "客戶A",
+  "appVersion": "1.0.0",
+  "logPaths": ["C:/MyApp/logs/app.log"],
+  "intervalMs": 10000,
+  "localApiPort": 9900
+}
