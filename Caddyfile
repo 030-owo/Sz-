@@ -1,0 +1,7 @@
+# Caddy 反向代理 — 自動 HTTPS。
+# 正式部署：把 SITE_ADDRESS 設成你的網域（如 fleet.example.com），Caddy 會自動簽 Let's Encrypt 憑證。
+# 本機測試：SITE_ADDRESS=:8080 走純 http 即可。
+{$SITE_ADDRESS} {
+	encode gzip
+	reverse_proxy server:8080
+}
